@@ -13,7 +13,7 @@ function signUpHandler() {
   let includes = false;
   let username = document.getElementById("inputusername");
   let password = document.getElementById("inputpassword");
-  for (let i = 0; i < contacts.length; i++){
+  for (let i = 0; i < memeber.length; i++){
     if (memeber[i].username === username){
         includes === true
         alert("identity already in database");
@@ -33,7 +33,7 @@ function signInHandler() {
   let index = false;
   let inputusername = document.getElementById("signinusername");
   let inputpassword = document.getElementById("signinpassword");
-  for (let i = 0; i < contacts.length; i++){
+  for (let i = 0; i < memeber.length; i++){
     if (memeber[i].username === inputusername && memeber[i].password === inputpassword){
       alert("Welcome");
       index = true;
