@@ -22,6 +22,7 @@ function signUpHandler() {
       alert("Sucessful Indoctrination");
     }
   }
+  console.log(username, password)
   savemember();
 } 
  
@@ -40,7 +41,7 @@ function signInHandler() {
       alert("no")
     }
   }
-  console.log(memeber);
+  console.log(inputusername, inputpassword);
 } 
  
 //SUPPORT FUNCTIONS
@@ -48,8 +49,7 @@ function signInHandler() {
 function newmember(memberusername, memberpassword){
   return {
     username: memberusername,
-    password: memberpassword,
-    
+    password: memberpassword,  
   }
 } 
  
