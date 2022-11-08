@@ -22,7 +22,7 @@ function signUpHandler() {
       alert("Sucessful Indoctrination");
     }
   }
-  console.log(username, password)
+  console.log(username, password, memeber)
   savemember();
 } 
  
