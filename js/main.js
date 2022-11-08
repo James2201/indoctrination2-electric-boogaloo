@@ -21,6 +21,7 @@ function signUpHandler() {
       memeber.push(newmember(username, password));
       alert("Sucessful Indoctrination");
     }
+    console.log(memeber[i].username)
   }
   console.log(username, password, memeber)
   savemember();
@@ -35,7 +36,7 @@ function signInHandler() {
   let inputpassword = document.getElementById("signinpassword").value;
   for (let i = 0; i < memeber.length; i++){
     if (memeber[i].username === inputusername && memeber[i].password === inputpassword){
-      alert("Welcome");
+      alert("Welcome");  
       index = true;
     } else if (index === false){
       alert("no")
@@ -57,9 +58,9 @@ function newmember(memberusername, memberpassword){
  
 function savemember(){
   localStorage.setItem("members", JSON.stringify(memeber));
-} 
+}  
   
 function loadmember(){
   let memberstr = localStorage.getItem("members");
   return JSON.parse(memberstr) ?? [];
-} 
+} //wasd, tfgh, ijkl, ;[;'(enter), arrowkeys, 8456
