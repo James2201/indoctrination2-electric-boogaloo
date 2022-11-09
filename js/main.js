@@ -17,13 +17,12 @@ function signUpHandler() {
     if (memeber[i].username === username){
         includes === true
         alert("identity already in database");
-    } else if (includes === false){
-      memeber.push(newmember(username, password));
-      alert("Sucessful Indoctrination");
     }
-    console.log(memeber[i].username)
   }
-  console.log(username, password, memeber)
+  if (includes === false){
+    memeber.push(newmember(username, password));
+    alert("Sucessful Indoctrination");
+  }
   savemember();
 } 
  
@@ -38,9 +37,10 @@ function signInHandler() {
     if (memeber[i].username === inputusername && memeber[i].password === inputpassword){
       alert("Welcome");  
       index = true;
-    } else if (index === false){
-      alert("no")
     }
+  }
+  if (index === false){
+    alert("no")
   }
   console.log(inputusername, inputpassword);
 } 
